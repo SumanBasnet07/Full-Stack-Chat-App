@@ -11,7 +11,7 @@ const useSendMessage = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://192.168.0.34:3000/message/send/${selectedConversation._id}`,
+        `${import.meta.env.VITE_BACKEND_URL}/message/send/${selectedConversation._id}`,
         { message: messageText },
         { withCredentials: true }
       );

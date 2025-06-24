@@ -11,7 +11,7 @@ const UseGetAllUsers = () => {
         setLoading(true)
         try {
               const token = Cookies.get('jwt');
-        const response = await axios.get('http://192.168.0.34:3000/user/allusers',{
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/user/allusers`,{
             withCredentials:true,
             headers:{
                 Authorization:`Bearer ${token}`

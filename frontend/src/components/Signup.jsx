@@ -16,7 +16,7 @@ const Signup = () => {
     const userInfo = {
       username,email,password,confirmPassword
     }
-    axios.post('http://192.168.0.34:3000/user/signup', userInfo)
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/user/signup`, userInfo)
     .then((response)=>{
       toast.success("User Registered Go to Login page")
       navigateTo('/login')

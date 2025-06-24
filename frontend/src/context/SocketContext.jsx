@@ -17,7 +17,7 @@ export const SocketProvider = ({ children }) => {
 
   useEffect(() => {
     if(authUser?.authUser?.user?._id){
-        const socket = io("http://192.168.0.34:3000", {
+        const socket = io(`${import.meta.env.VITE_BACKEND_URL}`, {
       query: {
         userId: authUser.authUser.user._id,
 

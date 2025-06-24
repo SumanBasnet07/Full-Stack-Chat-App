@@ -16,7 +16,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://192.168.0.34:3000/user/login",
+        `${import.meta.env.VITE_BACKEND_URL}/user/login`,
         userInfo,
         {
           withCredentials: true,

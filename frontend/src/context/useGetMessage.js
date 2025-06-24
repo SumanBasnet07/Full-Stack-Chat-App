@@ -10,7 +10,7 @@
         setLoading(true);
         if(selectedConversation){
           try {
-            const response = await axios.get(`http://192.168.0.34:3000/message/get/${selectedConversation._id}`,{withCredentials:true})
+            const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/message/get/${selectedConversation._id}`,{withCredentials:true})
             setMessage(response.data)
             setLoading(false)
         } catch (error) {

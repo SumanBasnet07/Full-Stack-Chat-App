@@ -6,7 +6,7 @@ import toast from 'react-hot-toast'
 const Logout = () => {
   const navigateTo = useNavigate();
   const handleLogout = ()=>{
-    axios.post('http://192.168.0.34:3000/user/logout',{},{withCredentials:true})
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/user/logout`,{},{withCredentials:true})
     .then((response)=>{
       if(response.data){
         localStorage.clear('ChatApp')
