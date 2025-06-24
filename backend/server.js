@@ -24,15 +24,17 @@ app.use(cookieParser());
 app.use('/user', userRoute);
 app.use('/message', messageRoute);
 
-// Serve frontend (this must come *after* API routes)
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const frontendPath = path.resolve(__dirname, '../frontend/dist');
+if (process.env.NODE_ENV === 'production') {
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+  const frontendPath = path.resolve(__dirname, '../frontend/dist');
 
-app.use(express.static(frontendPath));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(frontendPath, 'index.html'));
-});
+  app.use(express.static(frontendPath));
+
+  app.get('/*', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'index.html'));
+  });
+}
 
 // MongoDB + Server
 const PORT = process.env.PORT || 5000;
@@ -40,10 +42,11 @@ const MONGO = process.env.MONGO_URI;
 
 try {
   mongoose.connect(MONGO);
-  console.log('✅ Connected to MongoDB');
+  console.log(' Connected to MongoDB');
 } catch (error) {
-  console.log('❌ MongoDB connection failed');
+  console.log('MongoDB connection failed');
 }
+
 
 server.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Server running on port ${PORT}`);

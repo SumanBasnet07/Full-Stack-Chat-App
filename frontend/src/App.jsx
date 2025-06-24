@@ -5,6 +5,7 @@ import Login from './components/Login'
 import HomePage from './pages/HomePage';
 import { useAuth } from './context/AuthProvider';
 import toast,{Toaster} from 'react-hot-toast'
+
 const App = () => {
   const {authUser} = useAuth();
   return (
