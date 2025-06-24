@@ -8,7 +8,7 @@
 💬 **Real-time messaging magic in your browser!** A modern chat application built with MERN stack and Socket.io that brings conversations to life ✨
 
 ## 🌐 Live Demo
-**[Experience the chat magic!](https://your-deployment-url.com)** 🔥 *(Replace this with your live URL later)*
+**[Experience the chat magic!](https://chat-app-x0zi.onrender.com/)** 
 
 ## ✨ Features
 - 🔐 **User Authentication:** Secure signup/login with JWT tokens
