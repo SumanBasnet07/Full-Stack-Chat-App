@@ -1,126 +1,100 @@
-💬 Full Stack Chat App
+# 🚀 Full Stack Chat App
 
-A real-time full stack chat application built with the MERN stack and Socket.IO.
+![GitHub Repo stars](https://img.shields.io/github/stars/SumanBasnet07/Full-Stack-Chat-App?style=social)  
+![GitHub issues](https://img.shields.io/github/issues/SumanBasnet07/Full-Stack-Chat-App)  
+![GitHub license](https://img.shields.io/github/license/SumanBasnet07/Full-Stack-Chat-App)  
 
-🌐 Live Demo
+---
 
-🔗 chat-app-x0zi.onrender.com
+## 💬 About
 
-✨ Features
+A modern **real-time chat application** built with **MERN stack** (MongoDB, Express, React, Node.js) and **Socket.io** for live messaging.
 
-🔐 User Authentication (Signup, Login, Logout)
+- User authentication & authorization with JWT
+- Online/offline user status
+- Private one-on-one conversations
+- Responsive UI with Tailwind CSS
+- Deployed on Render with MongoDB Atlas
 
-🢑 View All Users & Real-time Online Status
+---
 
-📩 Send & Receive Messages Instantly (Socket.IO)
+## 🛠 Features
 
-🕒 Message timestamps (e.g., "5 mins ago")
+- **User Authentication:** Signup, Login, Logout with secure JWT tokens
+- **Real-time Messaging:** Instant message delivery with Socket.io
+- **Online User Tracking:** Shows online/offline status dynamically
+- **Conversations:** Start chat, view messages history
+- **Responsive Design:** Works well on desktop and mobile
+- **Deployment Ready:** Backend & frontend hosted on Render
 
-🌙 Responsive UI with Tailwind CSS
+---
 
-💻 Deployed on Render (single service)
+## 📁 Project Structure
 
-🛠️ Tech Stack
 
-Frontend:
+---
 
-React + Vite
+## ⚙️ Tech Stack
 
-Zustand (state management)
+| Frontend        | Backend         | Realtime        | Database       | Styling      |
+|-----------------|-----------------|-----------------|----------------|--------------|
+| React (Vite)    | Node.js (Express) | Socket.io       | MongoDB (Atlas) | Tailwind CSS |
 
-Axios
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js v16+
+- MongoDB Atlas account (or local MongoDB)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repo:**
+
+```bash
+git clone https://github.com/SumanBasnet07/Full-Stack-Chat-App.git
+cd Full-Stack-Chat-App
+cd backend
+npm install
+cd ../frontend
+npm install
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+# In backend folder
+npm run dev
+
+# In frontend folder
+npm run dev
+cd frontend
+npm run build
+Serve static frontend in backend express server (already configured).
+
+Push your code to Render (or any other cloud provider).
+
+Setup environment variables in Render dashboard.
+
+🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+Feel free to check the issues page.
+
+📄 License
+This project is MIT licensed.
+
+🙏 Acknowledgements
+React
+
+Express
+
+MongoDB
+
+Socket.io
 
 Tailwind CSS
 
-Socket.IO Client
+Inspired by many great open-source projects!
 
-Backend:
-
-Node.js + Express
-
-MongoDB + Mongoose
-
-JWT Auth via Cookies
-
-Socket.IO Server
-
-📁 Project Structure
-
-Full-Stack-Chat-App/
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   └── sockets/
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── vite.config.js
-├── .env
-├── package.json
-└── README.md
-
-📦 Installation (Local)
-
-Clone the Repo
-
-git clone https://github.com/SumanBasnet07/Full-Stack-Chat-App.git
-cd Full-Stack-Chat-App
-
-Install root/backend dependencies
-
-npm install
-
-Set up environment variables
-
-Create a .env file in root:
-
-PORT=3000
-MONGO_URI=your_mongo_connection_string
-JWT_SECRET=your_jwt_secret
-
-Run the server
-
-npm run dev
-
-Run the frontend
-
-cd frontend
-npm install
-npm run dev
-
-⚙️ Deployment (Render - Single Service)
-
-Push your code to GitHub.
-
-Create a new Web Service on Render.
-
-Set:
-
-Build Command: npm install && npm run build
-
-Start Command: npm start
-
-Add these environment variables:
-
-PORT
-
-MONGO_URI
-
-JWT_SECRET
-
-VITE_BACKEND_URL=https://your-service-name.onrender.com
-
-📷 Screenshots
-
-You can add screenshots or gifs here of the chat interface, login page, etc.
-
-🙌 Author
-
-👨‍💻 Suman BasnetGitHub ・ LinkedIn
-
-📄 License
-
-MIT
-
+Made with ❤️ by Suman Basnet
